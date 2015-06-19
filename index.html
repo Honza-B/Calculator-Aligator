@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="cs" ng-app="CA">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,13 +21,14 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-4 col-xs-12 calc-container">
+                <div class="col-lg-4 col-lg-offset-4 col-xs-12 calc-container" ng-controller="CAController">
+                    <div class="row">{{result}}</div>
                     <div class="row">
                         <div class="col-lg-9 col-xs-9">
-                            <div id="result">vysledek</div>
+                            <input id="result" ng-change="onChangeValue()" ng-model="displayValue"></input>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div>c</div>
+                            <div ng-click="onClickClear()">c</div>
                         </div>
                     </div>
                     <div class="row">
@@ -41,7 +42,7 @@
                             <div>9</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div>+</div>
+                            <div ng-click="onClickSum()">+</div>
                         </div>
                     </div>
                     <div class="row">
@@ -55,7 +56,7 @@
                             <div>6</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div>-</div>
+                            <div ng-click="onClickSubtract()">-</div>
                         </div>
                     </div>
                     <div class="row">
@@ -69,7 +70,7 @@
                             <div>3</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div>*</div>
+                            <div ng-click="onClickMultiply()">*</div>
                         </div>
                     </div>
                     <div class="row">
@@ -80,10 +81,10 @@
                             <div>.</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div>=</div>
+                            <div ng-click="onClickCalculate()">=</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div>/</div>
+                            <div ng-click="onClickDivide()">/</div>
                         </div>
                     </div>
                 </div>
@@ -94,5 +95,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/CA.js"></script>
     </body>
 </html>
