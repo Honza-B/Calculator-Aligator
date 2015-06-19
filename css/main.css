@@ -3,10 +3,33 @@
     text-align: center;
     border-radius: 4px;
     background: #9FC5FF;
+    padding: 5px;
 }
 
-.calc-container > .row > div{
+.calc-container .row {
+    margin: 0;
+}
+
+.calc-container .row > div {
+    padding: 2px;
+}
+
+.calc-container .row > div > div{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: context-menu;
     background: #fcfcfc;
     border-radius: 3px;
     border: 1px solid #ccc;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#result {
+    text-align: right;
 }
