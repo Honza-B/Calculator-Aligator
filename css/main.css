@@ -30,6 +30,16 @@
     font-weight: 600;
 }
 
+.calc-container .row > div > div:hover {
+    background: #eee;
+}
+
+.calc-container .row > div > .pressed {
+    background: #bbb !important;
+}
+
 #result {
     text-align: right;
+    padding-right: 15px;
+    background: #fff!important;
 }

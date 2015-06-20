@@ -22,10 +22,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-4 col-xs-12 calc-container" ng-controller="CAController">
-                    <div class="row">{{result}}</div>
                     <div class="row">
                         <div class="col-lg-9 col-xs-9">
-                            <input id="result" ng-change="onChangeValue()" ng-model="displayValue"></input>
+                            <div id="result" ng-model="displayValue">{{result}}</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
                             <div ng-click="onClickClear()">c</div>
@@ -33,58 +32,58 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-xs-3">
-                            <div>7</div>
+                            <div ng-click="onClickNum(7)">7</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div>8</div>
+                            <div ng-click="onClickNum(8)">8</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div>9</div>
+                            <div ng-click="onClickNum(9)">9</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div ng-click="onClickSum()">+</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-xs-3">
-                            <div>4</div>
-                        </div>
-                        <div class="col-lg-3 col-xs-3">
-                            <div>5</div>
-                        </div>
-                        <div class="col-lg-3 col-xs-3">
-                            <div>6</div>
-                        </div>
-                        <div class="col-lg-3 col-xs-3">
-                            <div ng-click="onClickSubtract()">-</div>
+                            <div ng-click="onClickOperator('+')" id="plus-btn" class="non-inverse">+</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-xs-3">
-                            <div>1</div>
+                            <div ng-click="onClickNum(4)">4</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div>2</div>
+                            <div ng-click="onClickNum(5)">5</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div>3</div>
+                            <div ng-click="onClickNum(6)">6</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div ng-click="onClickMultiply()">*</div>
+                            <div ng-click="onClickOperator('-')">-</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-xs-3">
-                            <div>0</div>
+                            <div ng-click="onClickNum(1)">1</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div>.</div>
+                            <div ng-click="onClickNum(2)">2</div>
+                        </div>
+                        <div class="col-lg-3 col-xs-3">
+                            <div ng-click="onClickNum(3)">3</div>
+                        </div>
+                        <div class="col-lg-3 col-xs-3">
+                            <div ng-click="onClickOperator('*')">*</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-xs-3">
+                            <div ng-click="onClickNum(0)">0</div>
+                        </div>
+                        <div class="col-lg-3 col-xs-3">
+                            <div ng-click="onClickPoint()">.</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
                             <div ng-click="onClickCalculate()">=</div>
                         </div>
                         <div class="col-lg-3 col-xs-3">
-                            <div ng-click="onClickDivide()">/</div>
+                            <div ng-click="onClickOperator('/')">/</div>
                         </div>
                     </div>
                 </div>
@@ -97,5 +96,6 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/angular.min.js"></script>
         <script src="js/CA.js"></script>
+        <script src="js/UI.js"></script>
     </body>
 </html>
