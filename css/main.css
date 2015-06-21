@@ -43,3 +43,9 @@
     padding-right: 15px;
     background: #fff!important;
 }
+
+@media (max-width: 767px) {
+    .calc-container {
+        margin-top: 0 !important;
+    }
+}
